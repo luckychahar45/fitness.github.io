@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ironhill Fitness | Gym, classes and personal training</title>
+  <meta name="description" content="Ironhill Fitness is a friendly neighbourhood gym with group classes, personal trainers and simple membership plans.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#top">IRONHILL</a>
+    <nav aria-label="Main">
+      <a href="#classes">Classes</a><a href="#plans">Plans</a><a href="#bmi">BMI check</a>
+      <a class="btn small" href="#join">Join</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>Train hard.<br>Feel better.<br>Every day.</h1>
+      <p class="lead">Strength floor, group classes and coaches who know your name. No pressure, no judgement, just progress.</p>
+      <div class="actions">
+        <a class="btn primary" href="#join">Book a free trial</a>
+        <a class="btn" href="#classes">See classes</a>
+      </div>
+      <ul class="stats">
+        <li><b>40+</b> classes a week</li>
+        <li><b>12</b> certified coaches</li>
+        <li><b>5am to 11pm</b> open daily</li>
+      </ul>
+    </section>
+
+    <section id="classes">
+      <h2>Class timetable</h2>
+      <div class="tabs" id="days" role="group" aria-label="Choose a day"></div>
+      <ul class="slots" id="slots"></ul>
+    </section>
+
+    <section id="plans">
+      <h2>Membership plans</h2>
+      <div class="toggle" role="group" aria-label="Billing period">
+        <button type="button" data-p="m" aria-pressed="true">Monthly</button>
+        <button type="button" data-p="y" aria-pressed="false">Yearly (2 months free)</button>
+      </div>
+      <div class="plans" id="plan-list"></div>
+    </section>
+
+    <section id="bmi">
+      <h2>Quick BMI check</h2>
+      <form class="bmi" id="bmi-form">
+        <label>Height (cm)<input id="h" type="number" min="100" max="230" placeholder="170" required></label>
+        <label>Weight (kg)<input id="w" type="number" min="25" max="250" placeholder="68" required></label>
+        <button class="btn primary" type="submit">Check</button>
+      </form>
+      <p id="bmi-out" class="result" role="status"></p>
+      <p class="fine">BMI is a rough guide only. Our coaches can give you a proper assessment.</p>
+    </section>
+
+    <section id="join">
+      <h2>Start with a free trial</h2>
+      <p class="intro">Tell us your name and goal. We will message you a time that suits you.</p>
+      <form id="lead" class="lead" novalidate>
+        <label>Name<input name="name" autocomplete="name" required></label>
+        <label>Main goal
+          <select name="goal"><option>Lose weight</option><option>Build muscle</option><option>Get fitter</option><option>Not sure yet</option></select>
+        </label>
+        <button class="btn primary" type="submit">Message us on WhatsApp</button>
+        <p id="lead-msg" class="fine" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Ironhill Fitness · 24 Station Road, Your City</span>
+    <span>hello@ironhill.example</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

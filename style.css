@@ -1,0 +1,66 @@
+:root{--bg:#fafafa;--panel:#fff;--ink:#101828;--muted:#5b6475;--line:#dfe3ea;
+  --blue:#1448ff;--coral:#ff5a4e;
+  --display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;--body:"Barlow","Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.1rem/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:.98;text-transform:uppercase}
+h2{font-size:clamp(2.1rem,5vw,3.2rem);margin-bottom:1.4rem}
+p{margin:0 0 1rem}
+
+.top{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;
+  padding:.8rem clamp(1rem,5vw,3rem);background:var(--blue);color:#fff}
+.brand{font:800 1.7rem var(--display);letter-spacing:.06em;text-decoration:none}
+nav{display:flex;align-items:center;gap:1.4rem}
+nav a{text-decoration:none;font-weight:500;opacity:.9}
+nav a:hover{opacity:1}
+.btn{display:inline-block;padding:.8rem 1.6rem;border:2px solid var(--ink);border-radius:4px;background:none;color:var(--ink);
+  font:700 1.05rem var(--display);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--coral);border-color:var(--coral);color:#fff}
+.top .btn.small{padding:.3rem 1rem;background:#fff;border-color:#fff;color:var(--blue);opacity:1}
+
+main,footer{max-width:64rem;margin:0 auto;padding-left:clamp(1rem,5vw,3rem);padding-right:clamp(1rem,5vw,3rem)}
+section{padding:4.5rem 0 0}
+.hero{padding-top:clamp(2.5rem,8vw,5rem)}
+h1{font-size:clamp(3.6rem,13vw,8.6rem);font-weight:800;color:var(--blue);margin-bottom:1.3rem;letter-spacing:-.01em}
+.lead{max-width:32rem;font-size:1.25rem;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem}
+.stats{display:flex;flex-wrap:wrap;gap:2rem;list-style:none;margin:2.4rem 0 0;padding:1.2rem 0 0;border-top:3px solid var(--ink);color:var(--muted)}
+.stats b{display:block;font:800 2.1rem var(--display);color:var(--ink)}
+
+.tabs,.toggle{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.tabs button,.toggle button{font:700 1rem var(--display);letter-spacing:.05em;text-transform:uppercase;padding:.45rem 1rem;
+  border:2px solid var(--ink);border-radius:4px;background:none;color:var(--ink);cursor:pointer}
+button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.slots{list-style:none;margin:0;padding:0;max-width:44rem}
+.slots li{display:grid;grid-template-columns:6rem 1fr auto;gap:1rem;align-items:baseline;padding:.95rem 0;border-bottom:1px solid var(--line)}
+.slots .t{font:700 1.3rem var(--display);color:var(--blue)}
+.slots b{font:700 1.3rem var(--display);text-transform:uppercase}
+.slots .c{color:var(--muted);font-size:.95rem}
+
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.plan{background:var(--panel);border:2px solid var(--ink);border-radius:6px;padding:1.5rem;display:flex;flex-direction:column}
+.plan.best{border-color:var(--blue);box-shadow:6px 6px 0 var(--blue)}
+.plan h3{font-size:1.7rem}
+.price{font:800 2.8rem var(--display);margin:.4rem 0}
+.price small{font:500 1rem var(--body);color:var(--muted)}
+.plan ul{margin:.5rem 0 1.4rem;padding-left:1.2rem;color:var(--muted);flex:1}
+.plan .btn{text-align:center}
+
+.bmi{display:flex;flex-wrap:wrap;gap:1rem;align-items:end}
+label{display:grid;gap:.3rem;font-weight:600}
+input,select{font:inherit;padding:.65rem .8rem;border:2px solid var(--ink);border-radius:4px;background:var(--panel);color:var(--ink);min-width:10rem}
+.result{font:700 1.6rem var(--display);text-transform:uppercase;margin:1.2rem 0 .4rem;color:var(--blue)}
+.intro{color:var(--muted)}
+.lead2,.lead.f{display:grid}
+form.lead{display:grid;gap:1rem;max-width:26rem}
+.fine{font-size:.9rem;color:var(--muted)}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;margin-top:5rem;padding-top:1.5rem;padding-bottom:2rem;
+  border-top:3px solid var(--ink);color:var(--muted);font-size:.93rem}
+
+@media (max-width:760px){.plans{grid-template-columns:1fr}}
+@media (max-width:560px){nav a:not(.btn){display:none}.slots li{grid-template-columns:5rem 1fr}.slots .c{grid-column:2}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
